@@ -1,21 +1,15 @@
 /**
  * Created by bweic on 23.06.2017.
  */
-public class Kunde {
-
+public class Kunde implements DATENELEMENT{
     static String vorname;
     static String nachname;
     static int alter;
     static String gebu;
     static int nummer;
-    static boolean vip;
+    static String vip;
 
-    public static void main(String[] args){
-        Kunde k1 = new Kunde("Dieter", "Kotz", 50, "20.10.1966", 1001, true);
-        System.out.println(k1.datenausgeben());
-    }
-
-    Kunde(String vn, String nn, int alt, String gb, int num, boolean vipeingabe){
+    Kunde(String vn, String nn, int alt, String gb, int num, String vipeingabe){
         vorname = vn;
         nachname = nn;
         alter = alt;
@@ -23,10 +17,23 @@ public class Kunde {
         nummer = num;
         vip = vipeingabe;
     }
-
-    public static String datenausgeben(){
+    public String infoAusgeben(){
         return "Name: " + vorname + " " + nachname + "; Alter: " + alter +
                 "; Geburtsdatum: " + gebu + "; Kundennummer: " + nummer + "; VIP?: " + vip;
     }
-
+    public boolean istKleinerAls(DATENELEMENT dvgl){
+        Kunde p = (Kunde) dvgl;
+        if(nachname.compareTo(p.nachname) < 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public boolean schluesselIstGleich(String vgl){
+        if(nachname == vgl){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
