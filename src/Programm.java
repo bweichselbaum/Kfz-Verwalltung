@@ -4,8 +4,9 @@
 public class Programm {
 
     public static void main(String[] args){
-        KfzGUI.main(args);
-        LISTE list = new LISTE();
+        KfzGUI prog = new KfzGUI();
+        prog.main(args);
+
 
     }
 }

@@ -7,6 +7,7 @@ public class ABSCHLUSS extends LISTENELEMENT{
     KNOTEN hintenEinfuegen(DATENELEMENT d){
         KNOTEN kneu = new KNOTEN (this, d);
         return kneu;
+
     }
     KNOTEN einfuegenVor(DATENELEMENT dneu, DATENELEMENT dvor){
         KNOTEN kneu = new KNOTEN (this, dneu);

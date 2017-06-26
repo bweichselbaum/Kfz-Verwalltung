@@ -15,9 +15,10 @@ public class KfzGUI {
     private JTextField txtGb;
     private JTextField txtAlt;
     private JTextField txtNn;
-    private JLabel lbl;
+    private JTextArea lbl;
     private JList listKunden;
     LISTE lst = new LISTE();
+
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("KfzGUI");
@@ -33,8 +34,9 @@ public class KfzGUI {
         btnKnd.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                lst.sortiertEinfuegen(new Kunde(txtVn.getText(), txtVn.getText(), Integer.parseInt(txtAlt.getText()), txtGb.getText(), Integer.parseInt(txtKn.getText()), txtVIP.getText()));
-                lbl.setText(lst.informationAusgeben());
+                lst.hintenEinfuegen(new Kunde(txtVn.getText(), txtVn.getText(), Integer.parseInt(txtAlt.getText()), txtGb.getText(), Integer.parseInt(txtKn.getText()), txtVIP.getText()));
+
+                lbl.insert(lst.informationAusgeben(), 1);
             }
         });
 

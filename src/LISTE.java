@@ -36,7 +36,7 @@ public class LISTE{
         return anfang.suchen(vgl);
     }
     String informationAusgeben(){
-       return anfang.informationAusgeben();
+        return anfang.informationAusgeben();
     }
     int laengeGeben(){
         return anfang.restlaengeGeben();

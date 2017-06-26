@@ -18,8 +18,8 @@ public class Kunde implements DATENELEMENT{
         vip = vipeingabe;
     }
     public String infoAusgeben(){
-        return "Name: " + vorname + " " + nachname + "; Alter: " + alter +
-                "; Geburtsdatum: " + gebu + "; Kundennummer: " + nummer + "; VIP?: " + vip;
+         return "Name: " + vorname + " " + nachname + "; Alter: " + alter +
+                "; Geburtsdatum: " + gebu + "; Kundennummer: " + nummer + "; VIP?: " + vip + "\n";
     }
     public boolean istKleinerAls(DATENELEMENT dvgl){
         Kunde p = (Kunde) dvgl;

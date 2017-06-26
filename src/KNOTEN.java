@@ -11,6 +11,7 @@ public class KNOTEN extends LISTENELEMENT{
     KNOTEN hintenEinfuegen(DATENELEMENT d){
         nachfolger = nachfolger.hintenEinfuegen(d);
         return this;
+
     }
     KNOTEN einfuegenVor(DATENELEMENT dneu, DATENELEMENT dvgl){
         if(daten == dvgl){
@@ -64,7 +65,7 @@ public class KNOTEN extends LISTENELEMENT{
     }
     String informationAusgeben(){
        nachfolger.informationAusgeben();
-        return daten.infoAusgeben();
+       return daten.infoAusgeben();
     }
     int restlaengeGeben(){
         return nachfolger.restlaengeGeben() +1;
