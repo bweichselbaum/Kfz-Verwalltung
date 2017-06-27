@@ -4,22 +4,20 @@
 public class Kunde implements DATENELEMENT{
     static String vorname;
     static String nachname;
-    static int alter;
     static String gebu;
     static int nummer;
     static String vip;
 
-    Kunde(String vn, String nn, int alt, String gb, int num, String vipeingabe){
+    Kunde(String vn, String nn, String gb, int num, String vipeingabe){
         vorname = vn;
         nachname = nn;
-        alter = alt;
         gebu = gb;
         nummer = num;
         vip = vipeingabe;
     }
     public String infoAusgeben(){
-         return "Name: " + vorname + " " + nachname + "; Alter: " + alter +
-                "; Geburtsdatum: " + gebu + "; Kundennummer: " + nummer + "; VIP?: " + vip + "\n";
+         return "Name: " + vorname + " " + nachname + "; Geburtsdatum: " + gebu +
+                 "; Kundennummer: " + nummer + "; VIP?: " + vip + "\n\n";
     }
     public boolean istKleinerAls(DATENELEMENT dvgl){
         Kunde p = (Kunde) dvgl;
@@ -32,8 +30,9 @@ public class Kunde implements DATENELEMENT{
     public boolean schluesselIstGleich(String vgl){
         if(nachname == vgl){
             return true;
-        }else{
+        }else {
             return false;
         }
     }
+
 }

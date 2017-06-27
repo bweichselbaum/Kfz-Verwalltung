@@ -6,7 +6,6 @@ public class Programm {
     public static void main(String[] args){
         KfzGUI prog = new KfzGUI();
         prog.main(args);
-
-
     }
+
 }
