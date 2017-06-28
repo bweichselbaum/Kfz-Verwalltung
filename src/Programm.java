@@ -4,7 +4,7 @@
 public class Programm {
 
     public static void main(String[] args){
-        KfzGUI prog = new KfzGUI();
+        StartGUI prog = new StartGUI();
         prog.main(args);
     }
 
